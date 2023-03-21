@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Config</title>
+    <link rel="stylesheet" href="/static/css/config.css">
+</head>
+<body>
+    <header class="header">
+        <a href="/"><h1>Config</h1></a>
+    </header>
+
+    <main class="main">
+    <div class="avatar">
+        <form action="/avatar" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" id="foto" style="display: none;" >
+        <button type="submit" class="enviar" >Confirmar</button>
+    </form>
+        <label for="foto"></label>
+        <p>Foto De Perfil</p>
+        
+    </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,36 @@
+.avatar{
+    display: flex;
+    width: 200px;
+    height: 100%;
+    align-items: center;
+    margin-right: 80px;
+    
+}
+.avatar a{
+  
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 20pt;
+    text-decoration: none;
+    text-transform: uppercase;
+    gap: 20px;
+}
+.avatar img{
+    border: 3px solid white;
+    width: 80px;
+    height: 80px;
+    background: white;
+    border-radius: 100%;
+}
+@media(max-width:512px){
+    .header h1{
+        font-size: 16pt;
+    }
+    .avatar a{
+        font-size: 12pt !important;
+    }
+    .avatar{
+        margin: 0;
+    }
+}

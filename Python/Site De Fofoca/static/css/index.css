@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 15%;
+    background: #1E1F22;
+    color: white;
+}
+.header h1{
+    margin-left: 20px;
+}
+.sign{
+    display: flex;
+    width: 200px;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+.sign a{
+    color: white;
+    font-size: 18pt;
+    text-decoration: none;
+}
+.sign a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.main{
+    display: flex;
+    width: 100%;
+    min-height: 85%;
+    background: #2B2D31;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.main .slider{
+    position: relative;
+    width: 90%;
+    height: 150px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.main .slider .wrapper{
+    width: 2000px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.wrapper .itens{
+    width: 250px;
+    height: 100%;
+    border-radius: 15px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    animation: carrosel infinite 15s;
+}
+.itens a{
+    display: flex;
+    color: red;
+    text-decoration: none;
+    font-size: 14pt;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.apps{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+    margin-bottom: 100px;
+}
+.apps a{
+    width: 100px;
+    border-radius: 15px;
+    padding: 5px;
+    font-size: 20pt;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+.apps a img{
+    width: 100%;
+}
+
+@keyframes carrosel{
+    0%{
+        right: 0;
+    }
+    20%{
+        right: 500px;
+    }
+    40%{
+        right: 1000px;
+    }
+    60%{
+        right: 1500px;
+    }
+    80%{
+        right: 1600px;
+    }
+    100%{
+        right: 0;
+    }
+}
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 10%;
+    background: black;
+    color: white;
+}
+
+
+
+
+@media(min-width:990px){
+    .apps a img{
+        width: 145%;
+    }
+}
+@media(max-width:320px){
+    .header h1{
+        font-size: 14pt;
+    }
+    .header .sign a{
+        font-size: 12pt;
+    }
+    .sign{
+        width: 150px;
+    }
+    .footer h1{
+        font-size: 12pt;
+    }
+    .apps a img{
+        width: 90%;
+    }
+}

@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/css/login-cad.css">
+</head>
+<body>
+    <header class="header">
+        <a href="/" style="text-decoration: none;"><h1>Login</h1></a>
+    </header>
+
+    <main class="main">
+        <form action="/login" method="post">
+            <label for="nome">Digite Seu Nome</label>
+            <input type="text" name="nome" id="nome">
+
+            <label for="senha">Digite Sua Senha</label>
+            <input type="password" name="senha" id="senha">
+
+            <button type="submit">Logar</button>
+
+            <div>
+                <a href="/resete">Recuperar Senha</a>
+                <a href="/cadastro">Cadastrar</a>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
