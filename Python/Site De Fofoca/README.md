@@ -1,11 +1,11 @@
 * G1 DO DUQUE
 
-** Tenologias Usadas
+* Tenologias Usadas
 HTML,CSS,JS,PY,SQLITE3,Ajax,json e Flask.
 
 Esse Projeto Foi Feito Apenas com intuito de aprendizado!
 
-**Oque Aprendi?
+*Oque Aprendi?
 Aprendi a Usar o Ajax Aprendi o conceito de sessions,
 entendi o conceito de chat em tempo real e aprendi a usar
 laçoes de repetição(foreach) para navegar em varios indices
