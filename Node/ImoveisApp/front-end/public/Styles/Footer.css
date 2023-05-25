@@ -1,0 +1,97 @@
+footer{
+    display: flex;
+    background: white;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+footer a{
+    color: black;
+    opacity: .5;
+    transition: .2s;
+}
+[data='hover']a:hover{
+    opacity: 1;
+    color:#9c1a11;
+}
+[data='container-1']{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 350px;
+    border-bottom: 1px solid gray;
+}
+[data='container-2']{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+[data='container-2'] h1{
+    color:  #9c1a11;
+    font-size: 22pt;
+    font-weight: 400;
+    width: 100%;
+    border-bottom: 2px solid #9c1a11;
+    margin-bottom: 18px;
+   
+}
+[data='container-2'] div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 33vh;
+    padding-top: 50px;
+    gap: 10px;
+    color: gray;
+    
+}
+a{
+    color: black ;
+}
+[data='container-2'] img{
+    width: 40px;
+}
+
+[data='container-2'] .link {
+    color: #222;
+    font-weight: 500;
+    border-bottom: 1px solid gray;
+}
+
+[data='container-2'] a:hover{
+    color: rgb(255, 166, 0);
+}
+[data='container-2'] input{
+    width: 100%;
+    height: 40px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid gray;
+}
+.btnSend{
+    width: 150px;
+    height: 50px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+.btnSend:hover{
+    border: 1px solid gray;
+    cursor: pointer;
+}
+@media(max-width:790px){
+    [data='container-2'] div{
+        display: flex;
+        margin: 0 auto;
+    }
+    [data='container-1'] {
+        font-size: 60%;
+    }
+}
