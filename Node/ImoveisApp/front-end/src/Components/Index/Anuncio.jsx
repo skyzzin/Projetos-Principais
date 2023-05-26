@@ -55,6 +55,7 @@ export default function Anuncio(){
                     <br /><br />
                     <h1>Descrição</h1>
                     <div className="descricao" style={css.descricao}>
+                            <span>{anuncio.desc}</span>
                         <div className="more" onClick={Desc} style={{fontSize:'20pt',cursor:'pointer'}}>. . .</div>
                     </div>
                 </div>

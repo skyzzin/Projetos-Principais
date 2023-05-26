@@ -45,11 +45,8 @@ export default function Remover(){
         <div className="anuncio" key={i}>
           <i className="fa-solid fa-trash remove-ico" onClick={RemoveItem}> <br /> {e.id}</i>
           <img src={e.img} alt="" />
-          <div className="desc">
-            <div className="quartos">
+          <b>{e.nome}</b>
           
-            </div>
-          </div>
      
         </div>
       ))}

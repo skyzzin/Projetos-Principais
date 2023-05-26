@@ -12,6 +12,7 @@ export default function Cadastrar(){
     const [garagens,setGaragens] = useState('')
     const [estado,setEstado] = useState('Estado')
     const [foto,setFoto] = useState('')
+    const [desc,setDesc] =useState('')
 
     const Submit = (e)=>{
         e.preventDefault()
@@ -24,7 +25,8 @@ export default function Cadastrar(){
             quartos: quartos,
             banheiros: banheiros,
             garagens: garagens,
-            estado: estado
+            estado: estado,
+            desc:desc
         }
     
         const formData = new FormData();
@@ -120,7 +122,7 @@ export default function Cadastrar(){
 
             <label htmlFor="foto"><i className="fa-solid fa-file-image" style={{fontSize:"80pt"}} ></i></label>
             <input type="file" name="foto" style={{display: 'none',}} id="foto" onChange={(e)=>{setFoto(e.target.files[0])}} />
-            <textarea name="" id="" cols="30" rows="10" placeholder='Descrição'></textarea>
+            <textarea id='desc' onChange={(e)=>{setDesc(e.target.value)}} cols="30" rows="10" placeholder='Descrição'></textarea>
                 <button type="reset" onClick={Enviar} className='cadastrar' >Cadastrar</button>
             </form>
             </div>

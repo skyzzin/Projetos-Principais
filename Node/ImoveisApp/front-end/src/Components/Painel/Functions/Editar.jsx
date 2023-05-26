@@ -27,7 +27,9 @@ export default function Editar() {
       <div className="editar">
          {anuncio.map((e, i) => (
           <div className="anuncio" key={i}>
+            <img src={e.img} alt="" />
             <Link to={`/painel/editar/${e.id}`}><i className="fa-solid fa-pen"> <br /> {e.id}</i></Link>
+            <b>{e.nome}</b>
           </div>
       ))}
       </div>

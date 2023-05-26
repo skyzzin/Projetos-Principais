@@ -23,6 +23,7 @@
     position: absolute;
     right: 10px;
     top: 10px;
+    color: white;
 }
 .remove-ico:hover{
     color: red;

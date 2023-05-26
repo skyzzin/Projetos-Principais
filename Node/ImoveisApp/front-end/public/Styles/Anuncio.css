@@ -8,4 +8,10 @@
 .descricao{
     height: 20vh ;
     position: relative;
+    display: flex;
+}
+.descricao span{
+    position: absolute;
+    left: 10px;
+    top: 10px;
 }
