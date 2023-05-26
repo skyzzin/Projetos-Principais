@@ -9,11 +9,14 @@
 }
 .bg{
     width: 100%;
-    height: 80vh;
+    height: auto;
+    position: absolute;
+    
 }
 @media(max-width:799px){    
     .bg{
-        width: 100%;
+        width: 100vh;
+       
     }
 
 }

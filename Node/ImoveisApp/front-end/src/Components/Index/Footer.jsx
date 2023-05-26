@@ -15,6 +15,7 @@ export default function Footer(){
             <h1>ENTRE EM CONTATO AGORA!</h1>
 
             <h3> <i className="fa-solid fa-phone"></i> (61) 99195-8209</h3>
+            
 
             <h2>CRECI 19337</h2>
             </div>
@@ -22,10 +23,10 @@ export default function Footer(){
             <div data='container-2'>
                 <div>
                     <h1>Nossos Contatos</h1>
-                    <a href="" ><i className="fa-solid fa-envelope"/>email@seusite.com</a>
-                    <span><i className="fa-solid fa-phone"/> (11) 4004-0000 <i className="fa-brands fa-whatsapp"/></span>
-                    <span><i className="fa-solid fa-phone"/> (11) 4004-0000 <i className="fa-brands fa-whatsapp"/></span>
-                    <span><i className="fa-solid fa-location-dot"/> Av. Paulista, Nº 300 Cerqueira Cesar / São Paulo - SP 
+                    <a href="" ><i className="fa-solid fa-envelope"/>Claudia@imoveisgoogle.com.br</a>
+                    <span><i className="fa fa-phone-square"/> (61) 99195-8209 <i className="fa-brands fa-whatsapp"/></span>
+                    <span><i className="fa fa-phone-square"/> (61) 99195-8209 <i className="fa-brands fa-whatsapp"/></span>
+                    <span><i className="fa-solid fa-location-dot"/> Bloco D Sala, 102, Asa Sul - Brasília/DF
                     <img src={ico} alt="" /></span>
                 </div>
 

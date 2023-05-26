@@ -6,6 +6,7 @@ const Multer = require('multer');
 const session = require('express-session')
 const fs = require('fs');
 const path = require('path');
+const port = 5000
 
 
 
@@ -85,4 +86,4 @@ app.post('/addproduto', Upload.single('foto'), async (req, res) => {
     }
 });
 
-app.listen(5000);
+app.listen(port);

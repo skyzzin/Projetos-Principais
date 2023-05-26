@@ -20,7 +20,6 @@ export default function App(){
         <Main />
         <Footer />
         </ContextApi.Provider>
-
         </>
     )
 }

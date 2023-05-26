@@ -13,7 +13,6 @@ export default function Header(){
 
   const {dados,setDados,Item,setItem} = useContext(ContextApi)
  
- 
   const Busca = async (e) => {
     const valor = e.target.value;
     setDados(valor);

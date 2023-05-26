@@ -29,8 +29,8 @@ header div a{
     font-size: 16pt;
 }
 header div a:hover{
-    background: white;
-    color: rgb(173, 173, 173);
+    background: rgb(95, 19, 19);
+    color: rgb(255, 255, 255);
 }
 #search{
     width: 300px;

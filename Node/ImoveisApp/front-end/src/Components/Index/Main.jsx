@@ -6,6 +6,7 @@ import casa from '../../../public/assets/casa.jpg'
 import bg from '../../../public/assets/bg.jpg'
 
 import ContextApi from '../../Contexts/ContextApi'
+import WppFloat from './WppFloat'
 
 
 
@@ -141,7 +142,7 @@ export default function  Main(){
                 </a>
                 ))}
            </div>
-            
+            <WppFloat />
 
 
 

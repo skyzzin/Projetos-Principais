@@ -1,13 +1,13 @@
 footer{
     display: flex;
     background: white;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
     height: 100%;
 }
 footer a{
-    color: black;
+    color: rgb(236, 98, 98);
     opacity: .5;
     transition: .2s;
 }
@@ -27,15 +27,15 @@ footer a{
 [data='container-2']{
     width: 100%;
     padding: 10px;
-    margin-bottom: 200px;
+    margin-bottom: 10vh;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-around;
+    align-items: start;
     flex-wrap: wrap;
 }
 [data='container-2'] h1{
     color:  #9c1a11;
-    font-size: 22pt;
+    font-size: 20pt;
     font-weight: 400;
     width: 100%;
     border-bottom: 2px solid #9c1a11;
@@ -45,12 +45,12 @@ footer a{
 [data='container-2'] div{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 33vh;
+    justify-content: space-around;
+    width: 25%;
     padding-top: 50px;
     gap: 10px;
     color: gray;
-    
+    font-size: 12pt;
 }
 a{
     color: black ;
@@ -87,9 +87,17 @@ a{
     cursor: pointer;
 }
 @media(max-width:790px){
+  
     [data='container-2'] div{
         display: flex;
         margin: 0 auto;
+        width: 100%;
+       
+     
+    }
+    [data='container-2']{
+        flex-direction: column;
+        
     }
     [data='container-1'] {
         font-size: 60%;
