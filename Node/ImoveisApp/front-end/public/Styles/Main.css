@@ -28,6 +28,7 @@ nav{
     overflow-y: scroll;
     gap: 20px;
     margin-left: 20px;
+    margin-top: 30px;
 
 }
 .card{
@@ -86,13 +87,15 @@ nav{
     justify-content: space-between;
     margin-top: 20px;
     font-size: 20px;
+   
 }
 ::-webkit-scrollbar{
   background:none;
+
 }
 /* Cor Do Scroll */
 ::-webkit-scrollbar-thumb {
-   
+    width: 0;
 }
 
 @media(max-width:799px){
@@ -102,4 +105,12 @@ nav{
     .cards{
         margin-top: 10px;
     }
+    .bg{
+        display: none;
+    }
+    main{
+        margin-top: 25vh;
+    }
+    
+    
 }

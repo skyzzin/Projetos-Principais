@@ -13,6 +13,6 @@ const Produtos = conn.define('produtos',{
     valor:{type:INTEGER}
 })
  
-conn.sync({force:false})      
+conn.sync({force:false})       
 
 module.exports = Produtos

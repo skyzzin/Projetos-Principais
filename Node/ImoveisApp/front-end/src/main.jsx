@@ -9,14 +9,18 @@ import AppPainel from './Components/AppPainel.jsx'
 
 
 
+
+
+
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
-   <Routes>
+
+     <BrowserRouter>
+      <Routes>
      <Route path='/' Component={App} />
      <Route path='/painel' Component={AppPainel} />
+      </Routes>
+    </BrowserRouter>
 
-   </Routes>
-  </BrowserRouter>
 )
 
 

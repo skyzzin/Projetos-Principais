@@ -1,12 +1,38 @@
 import { useNavigate } from 'react-router-dom'
-import { useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import ico from '../../../public/assets/ico.png'
 import { Link } from 'react-router-dom'
 import '../../../public/Styles/Header.css'
+import ContextApi from '../../Contexts/ContextApi'
+
+
 
 
 export default function Header(){
 
+
+  const {dados,setDados,Item,setItem} = useContext(ContextApi)
+ 
+ 
+  const Busca = async (e) => {
+    const valor = e.target.value;
+    setDados(valor);
+   
+    const itemsFiltrados = Item.filter(item => item['nome'].startsWith(dados));
+    setItem(itemsFiltrados);
+
+    const NewFetch = (await fetch('http://127.0.0.1:5000/produtos')).json()
+    const Resolve = await NewFetch
+    const Filter = Resolve.filter(item=>item['nome'].includes(dados))
+    setItem(Filter)
+
+    if(valor == 0){
+        const fetch = await NewFetch
+  
+        setItem(fetch)
+    }
+   
+  };
 
     return(
         <header>
@@ -22,7 +48,7 @@ export default function Header(){
           <div></div>
           <div></div>
         </nav>
-        <input type="text" name=""  id="search" placeholder='Buscar' />
+        <input type="search" name=""  id="search" placeholder='Buscar' value={dados} onChange={Busca}/>
       </header>
     )
 }
