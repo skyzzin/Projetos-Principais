@@ -1,8 +1,9 @@
-
 import { useState } from 'react'
-import '../../../public/Styles/Painel/Painel.css'
+import Side from '../Side'
+import '../../../../public/Styles/Painel/Functions/Cadastrar.css'
 
-export default function Painel(){
+
+export default function Cadastrar(){
     const [titulo,setTitulo] = useState('')
     const [tamanho,setTamanho] = useState('')
     const [valor,setValor] = useState('')
@@ -45,6 +46,7 @@ export default function Painel(){
 
         <>
         <div className="body">
+            <Side />
 
      
             <form onSubmit={Submit} className='form' >

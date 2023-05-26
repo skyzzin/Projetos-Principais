@@ -1,0 +1,24 @@
+.remove{
+    width: 95vh;
+    height: 80vh;
+    border: 1px solid white;
+    margin: 0 auto ;
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0px 80px;
+    padding-top: 30px;
+    overflow-x: scroll;
+
+    
+}
+.anuncio{
+    width: 200px;
+    height: 200px;
+    background: white;
+    border-radius: 5px;
+
+  
+}

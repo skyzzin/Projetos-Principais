@@ -1,11 +1,16 @@
-import Painel from "./Painel/Painel";
 
-
+import { useState } from 'react'
+import Side from './Painel/Side'
 
 export default function AppPainel(){
+
+ 
+
     return(
-       <>
-       <Painel />
-       </>
+      <>
+        <div className="body">
+            <Side />
+        </div>
+      </>
     )
 }
