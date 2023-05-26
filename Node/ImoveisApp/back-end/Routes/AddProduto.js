@@ -23,13 +23,13 @@ const Upload = Multer({ storage: Storage });
 
 
 Router.post('/addproduto', Upload.single('foto'), async (req, res) => {
-    const nome = req.body.titulo;
-    const quartos = req.body.quartos;
-    const banheiros = req.body.banheiros;
-    const garagens = req.body.garagens;
-    const tamanho = req.body.tamanho;
-    const valor = req.body.valor;
-    const estado = req.body.estado;
+    const nome = req.body.titulo.toLocaleLowerCase()
+    const quartos = req.body.quartos.toLocaleLowerCase()
+    const banheiros = req.body.banheiros.toLocaleLowerCase()
+    const garagens = req.body.garagens.toLocaleLowerCase()
+    const tamanho = req.body.tamanho.toLocaleLowerCase()
+    const valor = req.body.valor.toLocaleLowerCase()
+    const estado = req.body.estado.toLocaleLowerCase()
  
     try {
        Produtos.create({

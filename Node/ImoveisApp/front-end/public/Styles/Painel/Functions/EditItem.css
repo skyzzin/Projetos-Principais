@@ -1,14 +1,15 @@
 .edit-container{
     width: 90vh;
-    height: 80vh;
-    border: 1px solid white;
     margin:  0 auto;
     display: flex;
     flex-direction: column;
+
+    
 }
 .inputs{
     display: flex;
     width: 100%;
+    
     
 }
 .inputs input{
@@ -21,6 +22,7 @@
 .col1, .col2{
     display: flex;
     flex-direction: column;
+    
 }
 .select{
     margin-top: 10px;
@@ -29,4 +31,8 @@
 }
 button{
     margin-left: 10px;
+}
+.editbg{
+    height: 350px;
+    border-radius: 5px;
 }

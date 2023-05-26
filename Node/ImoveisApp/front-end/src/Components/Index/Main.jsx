@@ -127,7 +127,7 @@ export default function  Main(){
 
            <div className="cards">
            {Item.map((data, i) => (
-                <a href="/" className="card" key={i}>
+                <Link to={`/anuncio/${data.id}`} className="card" key={i}>
                     <input type="number" defaultValue={data.id} style={{ display: 'none' }} />
                     <div className="nome">{data.nome}</div>
                     <img src={data.img} alt="" />
@@ -139,7 +139,7 @@ export default function  Main(){
                     </div>
                     <div className="preco"><span>R$ <span>{data.valor}</span></span>
                      <div className="stado">{data.estado}</div> </div>
-                </a>
+                </Link>
                 ))}
            </div>
             <WppFloat />

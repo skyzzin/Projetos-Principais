@@ -73,19 +73,19 @@ export default function EditarItem(){
         <Side />
 
         <div className="edit-container">
-            <img src={valores.img} alt="" />
+            <img src={valores.img} className="editbg" alt="" />
             <div className="inputs">
 
                 <div className="col1">
                 <input type="text" placeholder="Titulo" onChange={(e)=>{setTitulo(e.target.value)}} />
-                <input type="text" placeholder="Metros M²" onChange={(e)=>{setTamanho(e.target.value)}} />
+                <input type="number" placeholder="Metros M²" onChange={(e)=>{setTamanho(e.target.value)}} />
                 <input type="text" placeholder="Preço" onChange={(e)=>{setPreco(e.target.value)}} />
                 </div>
 
                 <div className="col2">
-                <input type="text" placeholder="Quartos" onChange={(e)=>{setQuartos(e.target.value)}} />
-                <input type="text" placeholder="Banheiros" onChange={(e)=>{setBanheiros(e.target.value)}} />
-                <input type="text" placeholder="Garagens" onChange={(e)=>{setGaragens(e.target.value)}} />
+                <input type="number" placeholder="Quartos" onChange={(e)=>{setQuartos(e.target.value)}} />
+                <input type="number" placeholder="Banheiros" onChange={(e)=>{setBanheiros(e.target.value)}} />
+                <input type="number" placeholder="Garagens" onChange={(e)=>{setGaragens(e.target.value)}} />
                 </div>
 
                 <div className="col">
@@ -98,9 +98,12 @@ export default function EditarItem(){
                     <br /> <br />
                   
                 </div>
-               
+              
             </div>
-            <button onClick={Atualizar}>Atualizar</button>
+            <br />
+            <textarea name="" id="" cols="30" rows="10" style={{marginLeft: '10px',}} placeholder="Descrição"></textarea>
+            <br /><br />
+            <button onClick={Atualizar} style={css.button}>Atualizar</button>
 
           
             
@@ -112,4 +115,13 @@ export default function EditarItem(){
            
         </>
     )
+}
+
+const css = {
+    button:{
+        width:'200px',
+        height:'40px',
+        borderRadius: '5px',
+        cursor:'pointer'
+    }
 }

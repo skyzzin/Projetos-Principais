@@ -10,7 +10,7 @@ export default function Cadastrar(){
     const [quartos,setQuartos] = useState('')
     const [banheiros,setBanheiros] = useState('')
     const [garagens,setGaragens] = useState('')
-    const [estado,setEstado] = useState('')
+    const [estado,setEstado] = useState('Estado')
     const [foto,setFoto] = useState('')
 
     const Submit = (e)=>{
@@ -40,8 +40,6 @@ export default function Cadastrar(){
         })
         
     }
-
-
     return(
        
 
@@ -50,8 +48,9 @@ export default function Cadastrar(){
             <Side />
 
      
-            <form onSubmit={Submit} className='form' >
-               <div>
+            <form onSubmit={Submit} className='form'>
+                <div className="col1">
+                <div>
                 <label htmlFor="">Titulo</label>
                 <input type="text" id='title' onChange={(e)=>{setTitulo(e.target.value)}} />
                </div>
@@ -63,77 +62,66 @@ export default function Cadastrar(){
 
             <div>
                 <label htmlFor="">Preço</label>
-                <input type="number" id='valor' onChange={(e)=>{setValor(e.target.value)}} />
+                <input type="text" id='valor' onChange={(e)=>{setValor(e.target.value)}} />
             </div>
+                </div>
 
-               <div>
+                <div className="col2">
+                <div>
               
-                <select name="" id="quartos" onChange={(e)=>{setQuartos(e.target.value)}}>
-                    <option value="Quartos">Quartos</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                </select>
-               </div>
+              <select name="" id="quartos" onChange={(e)=>{setQuartos(e.target.value)}}>
+                  <option value="Quartos">Quartos</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+              </select>
+             </div>
 
-               <div>
-            
-                <select name="" id="banheiros" onChange={(e)=>{setBanheiros(e.target.value)}}>
-                    <option value="Banheiros">Banheiros</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                </select>
-               </div>
+             <div>
+          
+              <select name="" id="banheiros" onChange={(e)=>{setBanheiros(e.target.value)}}>
+                  <option value="Banheiros">Banheiros</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+              </select>
+             </div>
 
-               <div>
-            
-            <select name="" id="garagens" onChange={(e)=>{setGaragens(e.target.value)}}>
-                <option value="Garagem">Garagens</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-            </select>
-           </div>
-
-            
-
-                <br />
-
-                <input type="file" name="foto" id="foto" onChange={(e)=>{setFoto(e.target.files[0])}} />
+             <div>
+          
+          <select name="" id="garagens" onChange={(e)=>{setGaragens(e.target.value)}}>
+              <option value="Garagem">Garagens</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+          </select>
+         </div>
+                </div>
 
                 
 
-                <select name="" id="estados" onChange={(e)=>{setEstado(e.target.value)}}>
-                    <option value="alugar">Alugar</option>
-                    <option value="alugar">A Venda</option>
-                </select>
-                <br />
-
-                
-
-
-
-
-                <button type="reset" onClick={Enviar}>Cadastra</button>
+            <label htmlFor="foto"><i className="fa-solid fa-file-image" style={{fontSize:"80pt"}} ></i></label>
+            <input type="file" name="foto" style={{display: 'none',}} id="foto" onChange={(e)=>{setFoto(e.target.files[0])}} />
+            <textarea name="" id="" cols="30" rows="10" placeholder='Descrição'></textarea>
+                <button type="reset" onClick={Enviar} className='cadastrar' >Cadastrar</button>
             </form>
             </div>
         </>

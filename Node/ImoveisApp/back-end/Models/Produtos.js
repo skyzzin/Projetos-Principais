@@ -10,9 +10,10 @@ const Produtos = conn.define('produtos',{
     garagens:{type:INTEGER},
     tamanho:{type:INTEGER},
     estado:{type:STRING},
-    valor:{type:INTEGER}
+    valor:{type:INTEGER},
+    desc:{type:STRING}
 })
  
-conn.sync({force:false})       
+conn.sync({force:false})        
 
 module.exports = Produtos

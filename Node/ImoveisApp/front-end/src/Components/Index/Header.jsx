@@ -14,7 +14,7 @@ export default function Header(){
   const {dados,setDados,Item,setItem} = useContext(ContextApi)
  
   const Busca = async (e) => {
-    const valor = e.target.value;
+    const valor = e.target.value.toLocaleLowerCase()
     setDados(valor);
    
     const itemsFiltrados = Item.filter(item => item['nome'].startsWith(dados));

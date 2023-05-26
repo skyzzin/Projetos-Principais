@@ -1,0 +1,11 @@
+.activity{
+    min-height: 60vh !important;
+}
+.more{
+    position: absolute;
+    bottom: 10px;
+}
+.descricao{
+    height: 20vh ;
+    position: relative;
+}
