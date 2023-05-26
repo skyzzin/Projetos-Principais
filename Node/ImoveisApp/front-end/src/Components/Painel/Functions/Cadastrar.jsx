@@ -10,7 +10,7 @@ export default function Cadastrar(){
     const [quartos,setQuartos] = useState('')
     const [banheiros,setBanheiros] = useState('')
     const [garagens,setGaragens] = useState('')
-    const [estado,setEstado] = useState('alugar')
+    const [estado,setEstado] = useState('')
     const [foto,setFoto] = useState('')
 
     const Submit = (e)=>{
@@ -38,6 +38,7 @@ export default function Cadastrar(){
             headers: { 'enctype': 'multipart/form-data' },
             body: formData
         })
+        
     }
 
 

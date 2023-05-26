@@ -11,6 +11,7 @@ import Cadastrar from './Components/Painel/Functions/Cadastrar.jsx'
 import Remover from './Components/Painel/Functions/Remove.jsx'
 import Editar from './Components/Painel/Functions/Editar.jsx'
 import VerAnuncios from './Components/Painel/Functions/VerAnuncios.jsx'
+import EditarItem from './Components/Painel/Functions/EditarItem.jsx'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -23,6 +24,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
      <Route path='/painel/cadastrar' Component={Cadastrar} />
      <Route path='/painel/remover' Component={Remover} />
      <Route path='/painel/editar' Component={Editar} />
+     <Route path='/painel/editar/:id' Component={EditarItem} />
+
      <Route path='/painel/veranuncios' Component={VerAnuncios} />
     </Routes>
     </BrowserRouter>

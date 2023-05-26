@@ -1,0 +1,32 @@
+.edit-container{
+    width: 90vh;
+    height: 80vh;
+    border: 1px solid white;
+    margin:  0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.inputs{
+    display: flex;
+    width: 100%;
+    
+}
+.inputs input{
+    width: 300px;
+    height: 40px;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+}
+.col1, .col2{
+    display: flex;
+    flex-direction: column;
+}
+.select{
+    margin-top: 10px;
+    width: 100px;
+    padding: 5px;
+}
+button{
+    margin-left: 10px;
+}

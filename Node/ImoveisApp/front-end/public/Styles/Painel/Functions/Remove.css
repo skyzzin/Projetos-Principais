@@ -11,14 +11,24 @@
     padding: 0px 80px;
     padding-top: 30px;
     overflow-x: scroll;
-
-    
 }
 .anuncio{
     width: 200px;
-    height: 200px;
+   
     background: white;
     border-radius: 5px;
+    position: relative;
+}
+.remove-ico{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.remove-ico:hover{
+    color: red;
+    cursor: pointer;
+}
+.anuncio img{
+    width: 100%;
 
-  
 }
