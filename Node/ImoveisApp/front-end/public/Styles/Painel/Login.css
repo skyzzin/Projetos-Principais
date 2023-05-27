@@ -1,0 +1,38 @@
+.form{
+
+    width: 50%;
+}
+
+.formulario{
+    border: 1px solid black;
+    width: 50%;
+    margin: 0 auto;
+    height: 60vh;
+    border-radius: 15px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.formulario input{
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    padding: 5px;
+
+}
+.submit{
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+}
+.submit:hover{
+    border: 1px solid #333;
+    cursor: pointer;
+}
+.formulario input:focus{
+    box-shadow: dodgerblue 0px 0px 5px;
+   
+}

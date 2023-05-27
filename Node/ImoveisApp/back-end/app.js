@@ -12,7 +12,7 @@ const bodyParser = require('body-parser');
 
 
 app.use('/Imagens',express.static(path.join(__dirname, "Imagens")))
-app.use(cors({ origin: 'http://localhost:5173' }));
+app.use(cors({ origin: 'http://localhost:5174' }));
 app.use(bodyParser.urlencoded({ extended: true }));
  
 app.use(session({
