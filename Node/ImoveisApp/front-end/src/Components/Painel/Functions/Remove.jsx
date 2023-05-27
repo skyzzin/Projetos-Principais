@@ -1,15 +1,20 @@
 import Side from "../Side";
 import '../../../../public/Styles/Painel/Functions/Remove.css'
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import UserCTX from "../../../Contexts/UserCTX";
 
 export default function Remover(){
   const [anuncio,setAnuncio] = useState([])
+  
+
+  
   
   useEffect(() => {
     fetch('http://127.0.0.1:5000/produtos')
       .then((response) => response.json())
       .then((data) => {
         setAnuncio(data);
+        
 
       });
   }, []);

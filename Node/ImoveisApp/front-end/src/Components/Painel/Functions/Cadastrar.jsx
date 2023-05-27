@@ -4,6 +4,10 @@ import '../../../../public/Styles/Painel/Functions/Cadastrar.css'
 
 
 export default function Cadastrar(){
+
+    
+
+
     const [titulo,setTitulo] = useState('')
     const [tamanho,setTamanho] = useState('')
     const [valor,setValor] = useState('')

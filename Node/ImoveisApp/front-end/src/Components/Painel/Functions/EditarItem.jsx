@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 
 export default function EditarItem(){
 
+    
+
     const [titulo,setTitulo] = useState('')
     const [tamanho,setTamanho] = useState('')
     const [preco,setPreco] = useState('')
