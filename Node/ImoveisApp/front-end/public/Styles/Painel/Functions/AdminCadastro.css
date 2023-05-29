@@ -1,0 +1,50 @@
+.admin{
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid black;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+.coluna{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.adminpainel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+.adminpainel input{
+    width: 300px;
+    margin: 5px;
+}
+.adminpainel button{
+    width: 300px;
+    margin-right: 10px;
+}
+.cadastrados{
+    margin-top: 20px;
+    width: 500px;
+    height: 40vh;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.colunas{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.colunas div{
+    width: 50%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+   
+}

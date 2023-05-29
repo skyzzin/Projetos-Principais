@@ -1,10 +1,23 @@
 import Side from "../Side";
 import '../../../../public/Styles/Painel/Functions/Remove.css'
 import { useContext, useEffect, useState } from "react";
-import UserCTX from "../../../Contexts/UserCTX";
+import { useNavigate } from "react-router-dom";
+
 
 export default function Remover(){
+
+
+  const navigate = useNavigate()
+  const auth = localStorage.getItem("nome")
+  useEffect(()=>{
+      if(!auth){
+          navigate('/painel')
+      }
+  },[])
   const [anuncio,setAnuncio] = useState([])
+
+ 
+  
   
 
   

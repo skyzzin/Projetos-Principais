@@ -30,7 +30,8 @@ export default function  Main(){
     
     const Filter = (e) => {
         const nomeDaId = e.target.id;
-        const valor = e.target.value;
+        const valor = e.target.value
+
       
         fetch('http://127.0.0.1:5000/produtos')
         .then(response => {
@@ -129,9 +130,9 @@ export default function  Main(){
            {Item.map((data, i) => (
                 <Link to={`/anuncio/${data.id}`} className="card" key={i}>
                     <input type="number" defaultValue={data.id} style={{ display: 'none' }} />
-                    <div className="nome">{data.nome}</div>
+                    <div className="nome" style={{textTransform:'capitalize'}}>{data.nome}</div>
                     <img src={data.img} alt="" />
-                    <div className="desc">
+                    <div className="desc" style={{flexDirection:'row'}}>
                     <div className="quartos"><i className="fa-sharp fa-solid fa-bed"></i> <span>{data.quartos}</span></div>
                     <div className="banheiro"><i className="fa-solid fa-bath"></i> <span>{data.banheiros}</span></div>
                     <div className="garagem"><i className="fa-solid fa-car"></i> <span>{data.garagens}</span></div>

@@ -2,6 +2,11 @@ const express = require('express')
 const Produtos = require('../Models/Produtos')
 const Router = express.Router()
 
+Router.get('/painel/editar',(req,res)=>{
+    res.render('editar.ejs')
+})
+
+
 Router.post('/update',(req,res)=>{
     const valor = req.body
 

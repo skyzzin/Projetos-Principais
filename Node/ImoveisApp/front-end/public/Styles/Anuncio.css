@@ -1,17 +1,73 @@
-.activity{
-    min-height: 60vh !important;
-}
-.more{
-    position: absolute;
-    bottom: 10px;
-}
-.descricao{
-    height: 20vh ;
-    position: relative;
+.anuncio-container{
     display: flex;
+    flex-direction: column;
+    background: white;
 }
-.descricao span{
+.anuncio-container img{
+    width: 100%;
+    height: 60vh;
+}
+.back{
     position: absolute;
-    left: 10px;
-    top: 10px;
+    top: 20px;
+    left: 20px;
+    font-size: 20pt;
+}
+.infos{
+
+    display: flex;
+    height: 200px;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    text-transform: capitalize;
+}
+.row{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    font-size: 20pt;
+}
+.textarea{
+    text-transform: capitalize;
+    width: 80%;
+    border: 1px solid black;
+    margin-top: 20px;
+}
+input{
+    border: 1px solid black;
+    width: 80%;
+    border-radius: 5px;
+    height: 40px;
+}
+button{
+    width: 80%;
+  
+    height: 40px;
+ 
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.desc{
+    border-radius: 5px;
+    width: 90%;
+    display: flex;
+    height: 40vh;
+    margin: 0 auto;
+    padding: 5px;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+.contato{
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+    
+}
+
+.contato button{
+    margin:  0;
+    margin-top: 10px;
 }

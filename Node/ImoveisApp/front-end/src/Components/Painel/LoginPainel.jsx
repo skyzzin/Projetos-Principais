@@ -6,22 +6,44 @@ import Cadastrar from './Functions/Cadastrar'
 import Editar from './Functions/Editar'
 import EditarItem from './Functions/EditarItem'
 import Remover from './Functions/Remove'
-import UserCTX from '../../Contexts/UserCTX'
+
 
 
 
 function LoginPainel() {
+  const [nome,setNome] = useState()
+  const [senha,setSenha] = useState()
+  const navigate = useNavigate()
 
-  const {isAuth} = useContext(UserCTX)
+  const data = {
+    nome:nome,senha:senha
+  }
+
+  const Enviar = ()=>{
+    fetch('http://127.0.0.1:5000/finduser',{
+      method:"POST",
+      headers:{'Content-Type':"application/json"},
+      body:JSON.stringify(data)
+    }).then((e)=>{
+      e.text().then((el)=>{
+        if(nome == el){
+          localStorage.setItem("nome",nome)
+        }
+      })
+    })
+  }
+
+  useEffect(()=>{
+    const auth = localStorage.getItem("nome")
+    if(auth){
+      navigate('/painel/cadastrar')
+    }
+  })
+ 
   
 
   return (
     <>
-
-    <h1>{isAuth}</h1>
-
-
-
    <div className="body" style=
     {{display: 'flex',
     flexDirection: 'column',
@@ -35,9 +57,9 @@ function LoginPainel() {
     <h1> Estado </h1>
     </div>
     <form action="" className="formulario" >
-      <input type="text" placeholder='Nome De Administrador' />
-      <input type="text" placeholder='Senha De Administrador' />
-      <button className='submit'>Entrar</button>
+      <input type="text" placeholder='Nome De Administrador' onChange={(e)=>{setNome(e.target.value)}} />
+      <input type="password" placeholder='Senha De Administrador' onChange={(e)=>{setSenha(e.target.value)}} />
+      <button className='submit' onClick={Enviar}>Entrar</button>
     </form>
     </div>
     </>

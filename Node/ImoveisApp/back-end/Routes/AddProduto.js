@@ -21,6 +21,13 @@ const Storage = Multer.diskStorage({
 
 const Upload = Multer({ storage: Storage });
 
+Router.get('/painel/cadastrar',(req,res)=>{
+    res.render('cadastrar.ejs')
+})
+
+
+
+
 
 Router.post('/addproduto', Upload.single('foto'), async (req, res) => {
     const nome = req.body.titulo.toLocaleLowerCase()

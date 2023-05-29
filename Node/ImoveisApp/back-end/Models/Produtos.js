@@ -14,6 +14,6 @@ const Produtos = conn.define('produtos',{
     desc:{type:STRING}
 })
  
-conn.sync({force:false})          
+conn.sync({force:false})           
 
 module.exports = Produtos

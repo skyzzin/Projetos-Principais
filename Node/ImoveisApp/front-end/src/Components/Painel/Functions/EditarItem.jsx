@@ -1,10 +1,19 @@
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import Side from "../Side";
 import '../../../../public/Styles/Painel/Functions/EditItem.css'
 import { useEffect, useState } from "react";
 
 export default function EditarItem(){
-
+    
+    const auth = localStorage.getItem("nome")
+    const navigate = useNavigate()
+    useEffect(()=>{
+        if(!auth){
+            navigate('/painel')
+        }
+       
+    },[])
+    
     
 
     const [titulo,setTitulo] = useState('')

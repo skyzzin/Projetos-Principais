@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/side.css">
+    <script src="/public/js/cadastrar.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <%- include('side.ejs') -%>
+
+    <div class="container">
+        <h1 style="color: white; text-align: center;">Cadastrar</h1>
+
+        <input type="file" name="foto" id="foto" style="display: none;">
+        <label for="foto" class="foto">+</label>
+
+        <div class="inputs">
+            <div class="col1">
+                <label for="">Titulo</label>
+                <input type="text" class="titulo">
+
+                <label for="">Metros M²</label>
+                <input type="text" class="tamanho">
+
+                <label for="">Preço</label>
+                <input type="text" class="valor">
+            </div>
+
+            <div class="col2">
+                <select name="" id="" class="quartos">
+                    <option value="">Quartos</option>
+                </select>
+                <select name="" id="" class="banheiros">
+                    <option value="">Banheiros</option>
+                </select>
+                <select name="" id="" class="garagens">
+                    <option value="">Garagens</option>
+                </select>
+
+                <select name="" id="" class="estado">
+                    <option value="">Estado</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="desc">
+            <textarea name="" id="" cols="30" rows="10" placeholder="Descrição"></textarea>
+        </div>
+
+        <button class="submit">Cadastrar</button>
+    </div>
+</body>
+</html>

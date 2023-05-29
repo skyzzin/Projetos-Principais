@@ -6,8 +6,10 @@ export default function Side(){
     return(
         <div className="sidebar">
             <img src={avatar} alt="" />
+          
 
             <div className="functions">
+            <Link to={'/'} target='_blank'>Abrir o Site</Link>
             <Link to='/painel/cadastrar'>Cadastra</Link>
             <Link to="/painel/remover">Remover</Link>
             <Link to="/painel/editar">Editar</Link>

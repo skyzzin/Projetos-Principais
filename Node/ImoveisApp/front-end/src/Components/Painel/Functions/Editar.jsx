@@ -1,10 +1,25 @@
 import Side from "../Side";
 import '../../../../public/Styles/Painel/Functions/Editar.css'
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Editar() {
+
+  const auth = localStorage.getItem("nome")
+  const navigate = useNavigate()
+  useEffect(()=>{
+      if(!auth){
+          navigate('/painel')
+      }
+     
+  },[])
+
+
+
   const [anuncio,setAnuncio] = useState([])
+
+  
+  
   
   
   useEffect(() => {

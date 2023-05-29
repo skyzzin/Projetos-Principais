@@ -1,10 +1,18 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Side from '../Side'
 import '../../../../public/Styles/Painel/Functions/Cadastrar.css'
+import { useNavigate } from 'react-router-dom'
 
 
 export default function Cadastrar(){
-
+    const auth = localStorage.getItem("nome")
+    const navigate = useNavigate()
+    useEffect(()=>{
+        if(!auth){
+            navigate('/painel')
+        }
+       
+    },[])
     
 
 
@@ -63,7 +71,7 @@ export default function Cadastrar(){
 
                <div>
                 <label htmlFor="">Metros M²</label>
-                <input type="number" id='tamanho'onChange={(e)=>{setTamanho(e.target.value)}} />
+                <input type="text" id='tamanho'onChange={(e)=>{setTamanho(e.target.value)}} />
             </div>
 
             <div>
