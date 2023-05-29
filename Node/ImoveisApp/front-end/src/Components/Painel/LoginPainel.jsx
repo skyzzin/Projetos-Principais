@@ -11,6 +11,8 @@ import Remover from './Functions/Remove'
 
 
 function LoginPainel() {
+
+
   const [nome,setNome] = useState()
   const [senha,setSenha] = useState()
   const navigate = useNavigate()
@@ -39,6 +41,8 @@ function LoginPainel() {
       navigate('/painel/cadastrar')
     }
   })
+
+ 
  
   
 
@@ -56,7 +60,7 @@ function LoginPainel() {
     <h1>Tela De Login</h1>
     <h1> Estado </h1>
     </div>
-    <form action="" className="formulario" >
+    <form className="formulario" >
       <input type="text" placeholder='Nome De Administrador' onChange={(e)=>{setNome(e.target.value)}} />
       <input type="password" placeholder='Senha De Administrador' onChange={(e)=>{setSenha(e.target.value)}} />
       <button className='submit' onClick={Enviar}>Entrar</button>

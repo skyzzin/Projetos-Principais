@@ -10,7 +10,7 @@ express().use(
         saveUninitialized:true
     })
 )
-
+ 
 
 Router.post('/finduser',(req,res)=>{
     const nome = req.body.nome
@@ -20,7 +20,8 @@ Router.post('/finduser',(req,res)=>{
     .then((e)=>{
         try{
             const user = e.nome
-            if(user){res.send(user)}
+            res.send(user)
+         
         }
         catch{res.send('false')}
     })
