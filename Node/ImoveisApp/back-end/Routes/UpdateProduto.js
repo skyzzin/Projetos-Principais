@@ -2,10 +2,6 @@ const express = require('express')
 const Produtos = require('../Models/Produtos')
 const Router = express.Router()
 
-Router.get('/painel/editar',(req,res)=>{
-    res.render('editar.ejs')
-})
-
 
 Router.post('/update',(req,res)=>{
     const valor = req.body
@@ -14,7 +10,7 @@ Router.post('/update',(req,res)=>{
         {
             nome: valor.titulo,
             tamanho: valor.tamanho,
-            preco: valor.preco,
+            valor: valor.preco,
             quartos: valor.quartos,
             garagens: valor.garagens,
             banheiros: valor.banheiros,

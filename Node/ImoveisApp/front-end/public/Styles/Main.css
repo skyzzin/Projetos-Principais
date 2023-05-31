@@ -38,7 +38,7 @@ nav{
     border-radius: 4px;
     overflow: hidden;
     background: white;
-    padding: 10px;
+    padding-bottom: 20px;
     color: black;
     transition: .2s;
     display: flex;
@@ -52,7 +52,7 @@ nav{
 }
 .card img{
     width: 100%;
-    margin-top: 2px;
+  
 }
 .card .desc{
     display: flex;
@@ -61,7 +61,7 @@ nav{
     height: 25px;
     background: white;
     color: gray ;
-    padding-bottom: 5px;
+    padding: 5px;
     
     margin-top: 5px;
 }
@@ -75,19 +75,19 @@ nav{
 .card .nome{
     font-size: 20pt;
     width: 99%;
-    margin: 0 auto;
-
-    margin-bottom: 10px;
-    padding-bottom: 5px;
+    padding: 5px;
+    
 }
 .nome{
     margin-bottom: 10px;
+    padding: 5px;
 }
 .preco{
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
     font-size: 20px;
+    padding: 5px;
    
 }
 ::-webkit-scrollbar{
@@ -97,6 +97,9 @@ nav{
 /* Cor Do Scroll */
 ::-webkit-scrollbar-thumb {
     width: 0;
+}
+.FilterBtn{
+    display: none;
 }
 
 @media(max-width:799px){
@@ -110,9 +113,23 @@ nav{
         display: none;
     }
     main{
-      
-       
         padding-top: 23vh;
+    }
+    .Filter{
+        
+        flex-direction: column;
+    }
+    .FilterBtn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 40px;
+        background: white;
+        margin-left: 20px;
+    }
+    .activity{
+        display: flex;
         
     }
 

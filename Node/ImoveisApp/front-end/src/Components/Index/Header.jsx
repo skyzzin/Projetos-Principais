@@ -33,16 +33,29 @@ export default function Header(){
    
   };
 
+  const MenuEscondido = ()=>{
+    let menu = document.querySelector('.menu')
+    let navbar = document.querySelector('.navbar')
+    let search = document.querySelector('#search')
+
+    navbar.classList.toggle('activity')
+    
+  }
+
+
     return(
         <header>
-        <div>
+        <div className='navbar'>
+          <div className="closed" onClick={MenuEscondido}>
+            <span></span><span></span>
+          </div>
         <img src={ico} alt="" />
         <Link to="/" >Pagina Inicial</Link>
         <Link to="/sobre" >Sobre Nós</Link>
         <Link to="/contato" >Fale Conosco</Link>
         </div>
 
-        <nav className='menu'>
+        <nav className='menu' onClick={MenuEscondido} >
           <div></div>
           <div></div>
           <div></div>

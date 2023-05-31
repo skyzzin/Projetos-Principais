@@ -45,7 +45,7 @@ export default function  Main(){
         })
 
     };
-        
+
     return(
         <>
            
@@ -53,7 +53,14 @@ export default function  Main(){
             <img src={bg} className='bg' alt="" />
           <main className='main'>
             <section >
-            <nav>
+                <div  className="FilterBtn" onClick={()=>{
+                    const nav = document.querySelector('.Filter')
+
+                    nav.classList.toggle('activity')
+                }}>
+                    Filtro
+                </div>
+            <nav className='Filter'>
                 <select name="" id="quartos" onChange={Filter}>
                     <option value="0">Quartos</option>
                     <option value="1">1</option>
@@ -130,8 +137,9 @@ export default function  Main(){
            {Item.map((data, i) => (
                 <Link to={`/anuncio/${data.id}`} className="card" key={i}>
                     <input type="number" defaultValue={data.id} style={{ display: 'none' }} />
-                    <div className="nome" style={{textTransform:'capitalize'}}>{data.nome}</div>
                     <img src={data.img} alt="" />
+                    <br />
+                    <div className="nome" style={{textTransform:'capitalize'}}>{data.nome}</div>
                     <div className="desc" style={{flexDirection:'row'}}>
                     <div className="quartos"><i className="fa-sharp fa-solid fa-bed"></i> <span>{data.quartos}</span></div>
                     <div className="banheiro"><i className="fa-solid fa-bath"></i> <span>{data.banheiros}</span></div>
@@ -139,7 +147,7 @@ export default function  Main(){
                     <div className="metros"><div className="ico"> <span>{data.tamanho}M²</span></div></div>
                     </div>
                     <div className="preco"><span>R$ <span>{data.valor}</span></span>
-                     <div className="stado">{data.estado}</div> </div>
+                     <div className="stado" style={{textTransform:"capitalize"}}>{data.estado}</div> </div>
                 </Link>
                 ))}
            </div>

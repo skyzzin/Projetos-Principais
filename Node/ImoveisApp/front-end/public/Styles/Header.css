@@ -42,7 +42,9 @@ header div a:hover{
 .menu{
     display: none;
 }
-
+.closed{
+    display: none;
+}
 @media(max-width:799px){
     header div{
         display: none;
@@ -69,7 +71,37 @@ header div a:hover{
     main section nav{
         display: none;
     }
+    .navbar{
+      
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background: rgb(85, 85, 85);
+        justify-content: center;
+        padding-top: 150px;
+    }
+    .closed{
+        position: absolute;
+        display: flex;
+        width: 50px;
+        height: 50px;
+        left: 10px;
+        top: 40%;
+        justify-content: center;
+    }
+    .closed span{
+        width: 5px;
+        height: 100%;
+        background: red;
+        position: absolute;
+        border-radius: 5px;
+    }
+    .closed span:nth-child(1){transform: rotateZ(40deg)}
+    .closed span:nth-child(2){transform: rotateZ(140deg)}
    
+   
+
    
    
 }

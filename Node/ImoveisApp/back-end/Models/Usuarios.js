@@ -10,6 +10,6 @@ const Usuarios = conn.define('usuarios',{
     avatar:{type:STRING}
 })
  
-conn.sync({force:false})       
+conn.sync({force:false})        
 
 module.exports = Usuarios

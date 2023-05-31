@@ -14,6 +14,7 @@ export default function Side(){
             <Link to="/painel/remover">Remover</Link>
             <Link to="/painel/editar">Editar</Link>
             <Link to="/painel/administrador">Administrador</Link>
+            <Link to="/painel/emails">Emails Cadastrados</Link>
             </div>
         </div> 
     )

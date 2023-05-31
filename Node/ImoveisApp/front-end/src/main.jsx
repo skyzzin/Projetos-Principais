@@ -13,6 +13,7 @@ import Anuncio from './Components/Index/Anuncio.jsx'
 import AdmPainel from './Components/Painel/Functions/AdmPainel.jsx'
 import LoginPainel from './Components/Painel/LoginPainel.jsx'
 import PrivateRouter from './Contexts/PrivateRoute.jsx'
+import Emails from './Components/Painel/Functions/Emails.jsx'
 
 
 
@@ -25,17 +26,13 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                 <Route path='/sobre' Component={Sobre} />
                 <Route path='/contato' Component={Contato} />
 
-
-              
-
-
                 <Route path='/painel/remover' Component={Remover} />
                 <Route path='/painel/cadastrar' Component={Cadastrar} />
                 <Route path='/painel/editar' Component={Editar} />
                 <Route path='/painel/editar/:id' Component={EditarItem} />
                 <Route path='/painel/login' Component={LoginPainel} />
                 <Route path='/painel' Component={LoginPainel} />
-
+                <Route path="/painel/emails" Component={Emails} />
                 <Route path='/painel/administrador' Component={AdmPainel} />
 
 

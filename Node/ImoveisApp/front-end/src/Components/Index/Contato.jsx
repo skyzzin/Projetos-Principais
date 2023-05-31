@@ -20,6 +20,7 @@ export default function Contato(){
                 <input type="text" placeholder="Informe Seu Email"/>
                 <input type="text" placeholder="Inform Seu Telefone"/>
                 <textarea name="" id="" cols="30" rows="10" placeholder="Deixe Sua Mensagem"></textarea>
+                <button style={{margin:0,width:'100%',border:'1px solid #ccc',color:'#222'}}>Enviar</button>
             </form>
 
          </div>

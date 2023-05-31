@@ -21,9 +21,6 @@ const Storage = Multer.diskStorage({
 
 const Upload = Multer({ storage: Storage });
 
-Router.get('/painel/cadastrar',(req,res)=>{
-    res.render('cadastrar.ejs')
-})
 
 
 

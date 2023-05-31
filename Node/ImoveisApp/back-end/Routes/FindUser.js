@@ -15,8 +15,9 @@ express().use(
 Router.post('/finduser',(req,res)=>{
     const nome = req.body.nome
     const senha = req.body.senha
-
-    Usuarios.findOne({where:{nome:nome,senha:senha},raw:true})
+    if(nome){
+        if(senha){
+            Usuarios.findOne({where:{nome:nome,senha:senha},raw:true})
     .then((e)=>{
         try{
             const user = e.nome
@@ -25,6 +26,9 @@ Router.post('/finduser',(req,res)=>{
         }
         catch{res.send('false')}
     })
+        }
+    }
+    
 })
 
 

@@ -44,14 +44,6 @@ app.use(FindUser)
 app.set('view engine','ejs')
 app.use(Painel)
 
-
-
-
-
 app.get('/', (req, res) => {});
-
-
-
-
 
 app.listen(port);
