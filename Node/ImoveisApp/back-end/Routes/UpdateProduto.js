@@ -14,7 +14,8 @@ Router.post('/update',(req,res)=>{
             quartos: valor.quartos,
             garagens: valor.garagens,
             banheiros: valor.banheiros,
-            estado: valor.estado
+            estado: valor.estado,
+            local:valor.local
         },
         {where:{id:valor.id}}
     )

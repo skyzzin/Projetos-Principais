@@ -7,17 +7,14 @@
 .form{
     display: flex;
     align-items: start;
-    width: 95vh;
-
+    width: 100vh;
     margin: 0 auto;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 15px;
-    padding-top: 20px;
-  
-    border-radius: 15px;
-    padding: 20px;
+    flex-wrap: wrap;
+
+   
 }
 
 .col1 div{
@@ -63,4 +60,14 @@ textarea{
 .cadastrar:hover{
     cursor: pointer;
     border: 1px solid #222;
+}
+.coluna3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.coluna3 textarea{
+    width: 300px;
+    margin: 20px;
 }

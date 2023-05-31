@@ -135,7 +135,11 @@ export default function  Main(){
 
            <div className="cards">
            {Item.map((data, i) => (
-                <Link to={`/anuncio/${data.id}`} className="card" key={i}>
+                
+            
+                <div>
+                    <h1 style={{color:'#222'}}>{data.local}</h1>
+                     <Link to={`/anuncio/${data.id}`} className="card" key={i}>
                     <input type="number" defaultValue={data.id} style={{ display: 'none' }} />
                     <img src={data.img} alt="" />
                     <br />
@@ -147,8 +151,10 @@ export default function  Main(){
                     <div className="metros"><div className="ico"> <span>{data.tamanho}M²</span></div></div>
                     </div>
                     <div className="preco"><span>R$ <span>{data.valor}</span></span>
-                     <div className="stado" style={{textTransform:"capitalize"}}>{data.estado}</div> </div>
+                     <div className="estado" style={{textTransform:"capitalize"}}>{data.estado}</div></div>
                 </Link>
+                </div>
+              
                 ))}
            </div>
             <WppFloat />

@@ -23,6 +23,7 @@ export default function EditarItem(){
     const [banheiros,setBanheiros] = useState('')
     const [garagens,setGaragens] = useState('')
     const [estado,setEstado] = useState('')
+    const [local,setLocal] = useState('')
     
 
 
@@ -43,9 +44,8 @@ export default function EditarItem(){
         setBanheiros(e[0].banheiros)
         setGaragens(e[0].garagens)
         setEstado(e[0].estado)
+        setLocal(e[0].local)
       
-
-
         const filter = e.filter(item => item.id == id)
         setValores(filter[0])
         
@@ -62,7 +62,8 @@ export default function EditarItem(){
             quartos:quartos,
             garagens:garagens,
             banheiros:banheiros,
-            estado,estado
+            estado:estado,
+            local:local
         }
 
         fetch('http://127.0.0.1:5000/update',{
@@ -91,6 +92,7 @@ export default function EditarItem(){
                 <input type="text" placeholder="Titulo" onChange={(e)=>{setTitulo(e.target.value)}} />
                 <input type="number" placeholder="Metros M²" onChange={(e)=>{setTamanho(e.target.value)}} />
                 <input type="text" placeholder="Preço" onChange={(e)=>{setPreco(e.target.value)}} />
+                <input type="" placeholder="Local" onChange={(e)=>{setLocal(e.target.value)}} />
                 </div>
 
                 <div className="col2">

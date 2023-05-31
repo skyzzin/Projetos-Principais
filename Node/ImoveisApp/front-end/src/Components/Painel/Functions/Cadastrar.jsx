@@ -25,6 +25,7 @@ export default function Cadastrar(){
     const [estado,setEstado] = useState('Estado')
     const [foto,setFoto] = useState('')
     const [desc,setDesc] =useState('')
+    const [local,setLocal] =useState('')
 
     const Submit = (e)=>{
         e.preventDefault()
@@ -38,7 +39,8 @@ export default function Cadastrar(){
             banheiros: banheiros,
             garagens: garagens,
             estado: estado,
-            desc:desc
+            desc:desc,
+            local:local
         }
     
         const formData = new FormData();
@@ -51,6 +53,17 @@ export default function Cadastrar(){
             method: 'POST',
             headers: { 'enctype': 'multipart/form-data' },
             body: formData
+        }).then(()=>{
+            setTitulo("")
+            setTamanho("")
+            setValor("")
+            setQuartos("")
+            setBanheiros("")
+            setGaragens("")
+            setEstado("")
+            setFoto("")
+            setDesc("")
+            alert('Casa Cadastrada Com Sucesso')
         })
         
     }
@@ -77,6 +90,10 @@ export default function Cadastrar(){
             <div>
                 <label htmlFor="">Preço</label>
                 <input type="text" id='valor' onChange={(e)=>{setValor(e.target.value)}} />
+            </div>
+            <div>
+                <label htmlFor="">Local</label>
+                <input type="text" name="" id="local" onChange={(e)=>{setLocal(e.target.value)}} />
             </div>
                 </div>
 
@@ -128,14 +145,24 @@ export default function Cadastrar(){
               <option value="9">9</option>
           </select>
          </div>
+         <div>
+            <select name="estado" id="estado" onChange={(e)=>{setEstado(e.target.value)}}>
+                <option value="venda">Estado</option>
+                <option value="venda">A Venda</option>
+                <option value="alugar">Alugar</option>
+            </select>
+         </div>
                 </div>
 
+            <div className="coluna3">
                 
-
             <label htmlFor="foto"><i className="fa-solid fa-file-image" style={{fontSize:"80pt"}} ></i></label>
             <input type="file" name="foto" style={{display: 'none',}} id="foto" onChange={(e)=>{setFoto(e.target.files[0])}} />
             <textarea id='desc' onChange={(e)=>{setDesc(e.target.value)}} cols="30" rows="10" placeholder='Descrição'></textarea>
                 <button type="reset" onClick={Enviar} className='cadastrar' >Cadastrar</button>
+            </div>
+                
+
             </form>
             </div>
         </>

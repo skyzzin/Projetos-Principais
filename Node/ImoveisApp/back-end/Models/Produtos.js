@@ -11,9 +11,10 @@ const Produtos = conn.define('produtos',{
     tamanho:{type:INTEGER},
     estado:{type:STRING},
     valor:{type:INTEGER},
-    desc:{type:STRING}
+    desc:{type:STRING},
+    local:{type:STRING}
 })
  
-conn.sync({force:false})           
+conn.sync({force:false})            
 
 module.exports = Produtos

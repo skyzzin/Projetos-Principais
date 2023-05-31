@@ -35,6 +35,7 @@ Router.post('/addproduto', Upload.single('foto'), async (req, res) => {
     const valor = req.body.valor
     const estado = req.body.estado
     const desc = req.body.desc
+    const local = req.body.local
  
     try {
        Produtos.create({
@@ -45,7 +46,8 @@ Router.post('/addproduto', Upload.single('foto'), async (req, res) => {
             garagens: garagens,
             tamanho: tamanho,
             estado: estado,
-            desc:desc
+            desc:desc,
+            local:local
         }).then((data)=>{
           
            try{
