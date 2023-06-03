@@ -28,16 +28,15 @@ nav{
     width: 90%;
     overflow-y: scroll;
     gap: 20px;
-    margin-left: 20px;
-    margin-top: 30px;
+    justify-content: center;
+
 
 }
 .card{
     width: 40vh;
-    border: 1px solid white;
     border-radius: 4px;
     overflow: hidden;
-    background: white;
+    background: none;
     padding-bottom: 20px;
     color: black;
     transition: .2s;
@@ -45,53 +44,34 @@ nav{
     justify-content: space-around;
     flex-direction: column;
     position: relative;
-}
-.card:hover{
-    box-shadow: 0px 0px 10px white;
-   
-    transform: translateY(-3px);
-}
-.card img{
-    width: 100%;
-  
-}
-.card .desc{
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    height: 25px;
     background: white;
-    color: gray ;
-    padding: 5px;
     
-    margin-top: 5px;
-}
-.card .desc .ico{
-    border-bottom: 1px solid gray;
-    border-radius: 5px;
-    width: 50px;
-    display: flex;
-    justify-content: center;
-}
-.card .nome{
-    font-size: 20pt;
-    width: 99%;
-    padding: 5px;
-    
-}
-.nome{
-    margin-bottom: 10px;
-    padding: 5px;
-}
-.preco{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    font-size: 20px;
-    padding: 5px;
-   
 }
 
+.card img{
+    width: 100%;
+    height: 200px;
+}
+.informs{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    text-transform: capitalize;
+    padding: 10px;
+    font-size: 16pt;
+    justify-content: space-around;
+}
+.icons{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+.icons span{
+    display: flex;
+    flex-direction: column;
+    font-size: 12pt;
+}
 ::-webkit-scrollbar{
   background:none;
 
@@ -111,8 +91,17 @@ nav{
     right: 8px;
     border-radius: 5px;
     color: white;
-    
-  
+    text-transform: capitalize;
+}
+.ctt{
+    background: red;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    width: 150px;
+    height: 40px;
 }
 
 @media(max-width:799px){
@@ -144,6 +133,13 @@ nav{
     .activity{
         display: flex;
         
+    }
+    .d-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .d-container div{
+        width: 100% !important;
     }
 
     

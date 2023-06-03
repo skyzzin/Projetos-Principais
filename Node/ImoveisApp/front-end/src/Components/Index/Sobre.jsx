@@ -9,7 +9,7 @@ import local from '../../../public/assets/local.png'
 
 export default function Sobre() {
 
-
+    window.scrollTo(0, 0);
     return (
         <>
             <Header />

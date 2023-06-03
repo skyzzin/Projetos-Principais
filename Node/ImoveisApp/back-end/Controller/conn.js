@@ -5,6 +5,6 @@ const conn = new Sequelize({
     storage:'./Controller/banco.sqlite'
 })
 
-conn.sync({force:false}) 
+conn.sync({force:false})  
 
 module.exports = conn

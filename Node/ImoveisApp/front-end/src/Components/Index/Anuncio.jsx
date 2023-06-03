@@ -11,21 +11,27 @@ export default function Anuncio(){
     const {id} = useParams()
     const [anuncio,setAnuncio] = useState([])
 
-    fetch('http://127.0.0.1:5000/produtos').then((e)=>{
-        return e.json()
-    })
-    .then((data)=>setAnuncio(data[0]))
+   
 
-    const Desc = ()=>{
-        document.querySelector('.descricao').classList.toggle('activity')
-    }
+   
     useEffect(()=>{
+        fetch('http://127.0.0.1:5000/produtos').then((e)=>{
+            return e.json()
+        })
+        .then((item)=>{
+            const filter = item.filter(i => i.id == id)
+            setAnuncio(filter[0])
+
+        })
+     
      
             window.scrollTo(0, 0);
         
     },[])
   
-
+    const Desc = ()=>{
+        document.querySelector('.descricao').classList.toggle('activity')
+    }
 
     return(
         <>
@@ -47,7 +53,7 @@ export default function Anuncio(){
                     <div className="metros"><div className="ico"> <span>{anuncio.tamanho}M²</span></div></div>
                     </div>
               </div>
-              <div className="desc">
+              <div className="descr">
                     <hr style={{borderTop:'1px solid black'}} />
                      <br />
                     <h1>Descrição</h1>
@@ -57,8 +63,8 @@ export default function Anuncio(){
               <div className="contato">
                 <h1>Entre Em Contato</h1>
               <input type="text" placeholder="Email" />
-                <textarea name="" id="" cols="30" rows="10" className="textarea" 
-                value={`Olá Gostaria De Saber Mais Sobre o Imovel => ${anuncio.nome} Id =>  ${anuncio.id} `}>
+                <textarea name="text" id="" cols="30" rows="10" className="textarea" 
+                defaultValue={`Olá Gostaria De Saber Mais Sobre o Imovel De Id =>  ${id} `}>
                 </textarea>
                 <button type="submit">Enviar</button>
               </div>

@@ -12,7 +12,8 @@ const Produtos = conn.define('produtos',{
     estado:{type:STRING},
     valor:{type:INTEGER},
     desc:{type:STRING},
-    local:{type:STRING}
+    local:{type:STRING},
+    
 })
  
 conn.sync({force:false})            

@@ -4,8 +4,11 @@ const Router = express.Router()
 
 Router.get('/produtos', (req, res) => {
     Produtos.findAll({
-        raw: true
-    }).then((data) => {
+        raw: true,
+        order:[['id','DESC']]
+
+    }
+    ).then((data) => {
         res.send(data);
     });
 });

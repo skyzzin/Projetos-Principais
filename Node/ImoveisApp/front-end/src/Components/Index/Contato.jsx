@@ -8,12 +8,13 @@ import contato from '../../../public/assets/contato.png'
 
 
 export default function Contato(){
+    window.scrollTo(0, 0);
     return(
         <>
          <Header />
          <div data='contato'>
            
-            <div data="info"><img src={contato} alt="" /> <span>Entre Em Contato</span></div>
+            <div data="info" ><img src={contato} alt="" /> <span>Entre Em Contato</span></div>
 
             <form data='form'>
                 <input type="text" placeholder="Informe Seu Nome" />
