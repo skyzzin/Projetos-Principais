@@ -37,6 +37,7 @@ const UserAdd = require('./Routes/UserAdd')
 const FindUser = require('./Routes/FindUser');
 const AddDepoimentos = require('./Routes/AddDepoimentos')
 const BuscaDepoimentos = require('./Routes/BuscaDepoimentos')
+const RemoveDep = require('./Routes/RemoveDep')
 
 app.use(AddProduto)
 app.use(RemoveProduto)
@@ -46,6 +47,7 @@ app.use(UserAdd)
 app.use(FindUser)
 app.use(AddDepoimentos)
 app.use(BuscaDepoimentos)
+app.use(RemoveDep)
 
 app.set('view engine','ejs')
 app.use(Painel)

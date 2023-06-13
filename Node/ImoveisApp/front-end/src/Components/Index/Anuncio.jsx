@@ -42,25 +42,40 @@ export default function Anuncio(){
 
 
            <div className="anuncio-container">
-                <img src={anuncio.img} alt="" />
-                <div className="infos">
+                <div>
+                    <h1 style={{textTransform:'capitalize'}}>{anuncio.nome}</h1>
+                    <br />
+                <div style={{display:'flex',gap:'5px'}}>
+                <img src={anuncio.img} alt=""/>
+                <div className="column" style={{padding:'10px',display:'flex',fontSize:'14pt',gap:'5px',flexDirection:'column'}}>
+                <span><b><div className="fa-solid fa-bath"></div> Banheiros {anuncio.banheiros} </b></span>
+                <span><b><div class="fa-solid fa-car"></div> Garagens {anuncio.garagens}</b></span>
+                <span><b><div class="fa-solid fa-bed"></div> Quartos {anuncio.quartos}</b></span>
+               
+                <br /><br />
 
-                    <h1>{anuncio.nome}</h1> 
-                    <div className="row">
-                    <div><i className="fa-sharp fa-solid fa-bed"></i> <span>{anuncio.quartos}</span></div>
-                    <div className="banheiro"><i className="fa-solid fa-bath"></i> <span>{anuncio.banheiros}</span></div>
-                    <div className="garagem"><i className="fa-solid fa-car"></i> <span>{anuncio.garagens}</span></div>
-                    <div className="metros"><div className="ico"> <span>{anuncio.tamanho}M²</span></div></div>
-                    </div>
-              </div>
-              <div className="descr">
-                    <hr style={{borderTop:'1px solid black'}} />
-                     <br />
-                    <h1>Descrição</h1>
+                <h3>Descrição</h3>
+                <div className="descc">
+                    
                     {anuncio.desc}
-              </div>
+                </div>
 
-              <div className="contato">
+                </div>
+                </div>
+                <br />
+                <div style={{fontSize:'20pt',display:'flex',gap:'20px'}}>
+                   
+                <span><b style={{textTransform:'capitalize'}}>{anuncio.estado}</b></span>
+                <span><b> R$ {anuncio.valor}</b></span>
+                </div>
+
+                </div>
+                  
+                     
+           </div>
+
+           
+           <div className="contato">
                 <h1>Entre Em Contato</h1>
               <input type="text" placeholder="Email" />
                 <textarea name="text" id="" cols="30" rows="10" className="textarea" 
@@ -68,11 +83,8 @@ export default function Anuncio(){
                 </textarea>
                 <button type="submit">Enviar</button>
               </div>
-                
 
-        
-                 
-           </div>
+
 
            <Footer />
         </>

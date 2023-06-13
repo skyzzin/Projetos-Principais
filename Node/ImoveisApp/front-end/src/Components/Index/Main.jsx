@@ -7,6 +7,7 @@ import bg from '../../../public/assets/bg.jpg'
 
 import ContextApi from '../../Contexts/ContextApi'
 import WppFloat from './WppFloat'
+import Footer from './Footer'
 
 
 
@@ -42,16 +43,20 @@ export default function Main() {
                 const itemsFiltrados = items.filter(item => item[nomeDaId] >= valor);
 
                 setItem(itemsFiltrados)
+                
             })
+            
+
+            
 
     };
 
     const [depoimentos, setDepoimentos] = useState([])
-    useEffect(()=>{
+    useEffect(() => {
         fetch('http://127.0.0.1:5000/depoimentos')
-        .then((e)=>{return e.json()})
-        .then((data)=>{setDepoimentos(data)})
-    },[])
+            .then((e) => { return e.json() })
+            .then((data) => { setDepoimentos(data) })
+    }, [])
 
     return (
         <>
@@ -139,7 +144,7 @@ export default function Main() {
 
                 </section>
 
-                <h1 style={{
+                <h1 data='title' style={{
                     marginTop: 40,
                     paddingBottom: 50,
                     fontSize: 40
@@ -156,9 +161,9 @@ export default function Main() {
                                 <div className="informs">
                                     <div className="nome">{data.nome}</div>
                                     <div className="desc">
-                                        <span style={{ 
+                                        <span style={{
                                             fontSize: '12pt',
-                                     }}>{data.desc} </span>
+                                        }}>{String(data.desc).length > 40 ? `${data.desc.slice(0, 40)}...` : data.desc}</span>
                                     </div>
                                     <div className="icons">
                                         <span>M² <br /> <b>{data.tamanho}</b> </span>
@@ -171,23 +176,23 @@ export default function Main() {
                                         >R$ {data.valor} <div className="ctt">Contato</div></span>
 
                                         <span style={{
-                                            background:'red',
-                                            width:'50px',
-                                            padding:'5px',
-                                            display:'flex',
-                                            position:'absolute',
-                                            top:'10px',
-                                            alignItems:'center',
-                                            justifyContent:'center',
+                                            background: 'red',
+                                            width: '50px',
+                                            padding: '5px',
+                                            display: 'flex',
+                                            position: 'absolute',
+                                            top: '10px',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
                                             borderRadius: 5,
-                                            }}>
-                                        <i className="fa-solid fa-circle-info"
-                                        style={{
-                                        color:'white',
-                                        fontSize: '12pt',
-                                       
-                                    
-                                        }}> {data.id}</i>
+                                        }}>
+                                            <i className="fa-solid fa-circle-info"
+                                                style={{
+                                                    color: 'white',
+                                                    fontSize: '12pt',
+
+
+                                                }}> {data.id}</i>
                                         </span>
 
 
@@ -204,56 +209,21 @@ export default function Main() {
                 <WppFloat />
             </main>
 
-                        
+
             <div className="depoimentos"
-                style={{
-                    display: 'flex',    
-                    justifyContent:'center',
-                    alignItems:'center',
-                    width: '100%',
-                    flexDirection:'column',
-                    padding: "50px",
+>
+                <h1>Depoimentos</h1>
+               
 
-                }}>
-                    <h1>Depoimentos</h1>
-                    <br /><br />
-
-                <div className="d-container"
-                style={{
-                    display:'flex',
-                    gap:'20px',
-                    flexWrap:'wrap',
-                    justifyContent:'center'
-                }} >
-                {depoimentos.map((e,i)=>(
-                    <div key={i * 2} 
-                    style={{
-                        display:'flex',
-                        flexDirection:'column',
-                        width:'48%',
-                        justifyContent:'center',
-                        background:'white',
-                        overflow:'hidden',
-                        borderRadius: 5,
-                        gap:'5px'
-                    }}>
-                        <br />
-                        <img src={e.avatar} alt="" style={{
-                            width:'120px',
-                            height:'120px',
-                            borderRadius: '100%',
-                            margin: '0 auto',
-
-                            }} />
-                        <span style={{margin: '10px',}}>{e.msg}</span>
-                    </div>
-               ))}
+                <div className="d-container" >
+                    {depoimentos.map((e, i) => (
+                        <div key={i * 2}>
+                     
+                            <img src={e.avatar} alt="" style={{width:'auto',height:'auto'}} />
+                            <span>{e.msg}</span>
+                        </div>
+                    ))}
                 </div>
-              
-
-
-
-
             </div>
 
         </>

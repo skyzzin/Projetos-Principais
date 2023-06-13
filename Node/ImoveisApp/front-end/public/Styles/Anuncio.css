@@ -2,10 +2,12 @@
     display: flex;
     flex-direction: column;
     background: white;
+    padding: 50px;
+    
+
 }
 .anuncio-container img{
-    width: 100%;
-    height: 60vh;
+    min-width: 70%;
 }
 .back{
     position: absolute;
@@ -13,21 +15,7 @@
     left: 20px;
     font-size: 20pt;
 }
-.infos{
 
-    display: flex;
-    height: 200px;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
-    text-transform: capitalize;
-}
-.row{
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    font-size: 20pt;
-}
 .textarea{
     text-transform: capitalize;
     width: 80%;
@@ -48,26 +36,31 @@ button{
     border: 1px solid black;
     border-radius: 5px;
 }
-.descr{
-    border-radius: 5px;
-    width: 90%;
-    display: flex;
-    height: 40vh;
-    margin: 0 auto;
-    padding: 5px;
-    flex-direction: column;
-    overflow-y: scroll;
+.column{
+    width: 100%;
 }
 .contato{
     display: flex;
     width: 90%;
     flex-direction: column;
     justify-content: center;
-    padding: 5px;
     
 }
-
 .contato button{
     margin:  0;
     margin-top: 10px;
+}
+.descc{
+    overflow-y: scroll;
+    height: 390px;
+}
+body{
+    background: white;
+}
+@media(max-width:650px){
+    .anuncio-container div{
+        display: flex;
+        flex-direction: column;         
+    }
+
 }

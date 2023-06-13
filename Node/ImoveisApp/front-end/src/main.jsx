@@ -15,6 +15,7 @@ import LoginPainel from './Components/Painel/LoginPainel.jsx'
 import PrivateRouter from './Contexts/PrivateRoute.jsx'
 import Emails from './Components/Painel/Functions/Emails.jsx'
 import Depoimentos from './Components/Painel/Functions/Depoimentos.jsx'
+import RemoveDepoimento from './Components/Painel/Functions/RemoveDepoimento.jsx'
 
 
 
@@ -36,6 +37,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                 <Route path="/painel/emails" Component={Emails} />
                 <Route path='/painel/administrador' Component={AdmPainel} />
                 <Route path='/painel/depoimentos' Component={Depoimentos} />
+                <Route path='/painel/removedep' Component={RemoveDepoimento} />
 
 
     
