@@ -46,7 +46,6 @@ function RemoveDepoimento() {
             position:'relative',
             background:'#ccc',
             margin: '10px',
-            borderRadius: 5,
            
             }}>
               

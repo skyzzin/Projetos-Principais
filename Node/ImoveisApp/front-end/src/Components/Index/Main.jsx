@@ -217,7 +217,7 @@ export default function Main() {
 
                 <div className="d-container" >
                     {depoimentos.map((e, i) => (
-                        <div key={i * 2}>
+                        <div key={i * 10}>
                      
                             <img src={e.avatar} alt="" style={{width:'auto',height:'auto'}} />
                             <span>{e.msg}</span>

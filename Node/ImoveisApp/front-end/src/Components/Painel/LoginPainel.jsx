@@ -50,7 +50,7 @@ function LoginPainel() {
     <>
    <div className="body" style=
     {{display: 'flex',
-    flexDirection: 'column',
+
     justifyContent: 'center',
     flexDirection:'column'}}
    >
